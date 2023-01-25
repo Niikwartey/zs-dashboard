@@ -62,7 +62,7 @@ function TruncateText({
   );
 }
 
-export default function DevicessTable({
+export default function DevicesTable({
   computers,
   macOSUpdates,
 }: IDevicesTableProps) {

@@ -3,7 +3,7 @@ import {
   IJamfMacOSUpdates,
   IJamfPostMacOSUpdateBody,
   TJamfApiKey,
-} from '../schemas';
+} from '@/data/schemas';
 
 const username = process.env.JAMF_USERNAME;
 const password = process.env.JAMF_PASSWORD;

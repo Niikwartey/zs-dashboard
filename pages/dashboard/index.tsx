@@ -16,8 +16,8 @@ import {
   TJamfInventoryInfo,
 } from '@/data/schemas';
 import { calcInventoryStats } from '@/utils';
-import { CategoryCard } from '@/pages/dashboard/CategoryCard';
-import DevicesTable from './DevicesTable';
+import CategoryCard from '@/components/CategoryCard';
+import DevicesTable from '@/components/DevicesTable';
 
 function inventoryCategories(inventoryInfo: TJamfInventoryInfo): ICategory[] {
   if (!inventoryInfo) return [];
@@ -112,6 +112,7 @@ export async function getServerSideProps() {
     IJamfComputerInventory | null
   ];
 
+  // TODO: Remove this once we have more real data
   const seededComputers: IJamfComputer[] = [
     ...(computersRes?.results || []),
     makeFakeJamfComputer({ id: '1234' }),
